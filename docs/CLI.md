@@ -247,6 +247,11 @@ Alias: `-i`. Run all tests serially in the current process, rather than creating
 a worker pool of child processes that run tests. This can be useful for
 debugging.
 
+### `--runTestsByPath`
+
+Used when provided patterns are exact file paths. This avoids converting them
+into a regular expression and matching it against every single file.
+
 ### `--setupTestFrameworkScriptFile=<file>`
 
 The path to a module that runs some code to configure or set up the testing
