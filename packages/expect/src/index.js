@@ -215,7 +215,7 @@ const makeThrowingMatcher = (
     let result: ExpectationResult;
 
     try {
-      result = matcher.apply(matcherContext, [actual].concat(args));
+      result = matcher.apply(matcherContext, [actual].concat(args, getMatchers()));
     } catch (error) {
       if (
         matcher[INTERNAL_MATCHER_FLAG] === true &&
